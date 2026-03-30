@@ -9,6 +9,9 @@ services:
       - type: bind
         source: /root/.acme.sh/docker-dyma.online_ecc
         target: /certs
+      - type: bind
+        source: .
+        target: /app
     ports:
       - "80:80"
       - "443:443"
